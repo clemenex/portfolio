@@ -10,6 +10,8 @@ interface ProjectDetailsProps {
 }
 
 export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack, isDark, toggleTheme }) => {
+   const [activeImage, setActiveImage] = useState<string | null>(null);
+
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
       {/* Navbar for Details Page */}
@@ -67,14 +69,18 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack,
               </div>
            </div>
 
-           {/* Hero Image */}
-           <div className="rounded-3xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 aspect-video relative group">
-              <img 
-                src={project.screenshots?.[0]} 
-                alt={`${project.title} screenshot`} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-           </div>
+            {/* Hero Image */}
+            <button
+            type="button"
+            onClick={() => setActiveImage(project.screenshots?.[0] ?? null)}
+            className="rounded-3xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 aspect-video relative group text-left"
+            >
+            <img 
+               src={project.screenshots?.[0]} 
+               alt={`${project.title} screenshot`} 
+               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            </button>
 
            {/* Detailed Description */}
            <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
@@ -84,16 +90,26 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack,
               </p>
            </div>
            
-           {/* Gallery Grid */}
-           {project.screenshots && project.screenshots.length > 1 && (
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {project.screenshots.slice(1).map((shot, idx) => (
-                  <div key={idx} className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm aspect-[4/3] group">
-                     <img src={shot} alt="Gallery" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                  </div>
-                ))}
-             </div>
-           )}
+         {/* Gallery Grid */}
+         {project.screenshots && project.screenshots.length > 1 && (
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {project.screenshots.slice(1).map((shot, idx) => (
+               <button
+               type="button"
+               key={idx}
+               onClick={() => setActiveImage(shot)}
+               className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm aspect-[4/3] group text-left"
+               >
+               <img
+                  src={shot}
+                  alt={`${project.title} screenshot ${idx + 2}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               />
+               </button>
+            ))}
+         </div>
+         )}
+
 
         </div>
 
@@ -120,6 +136,33 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack,
            </div>
 
         </div>
+      
+               {activeImage && (
+         <div
+            className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setActiveImage(null)}
+         >
+            <div
+               className="relative max-w-5xl w-full"
+               onClick={(e) => e.stopPropagation()}
+            >
+               <button
+               type="button"
+               onClick={() => setActiveImage(null)}
+               className="absolute -top-10 right-0 text-white/80 hover:text-white text-sm font-medium"
+               >
+               Close ✕
+               </button>
+
+               <img
+               src={activeImage}
+               alt={`${project.title} full view`}
+               className="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+               />
+            </div>
+         </div>
+         )}
+
 
       </div>
     </div>

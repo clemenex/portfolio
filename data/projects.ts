@@ -33,6 +33,7 @@ export const projects: Project[] = [
         "Interactive 2D map & GeoParquet exports"
     ],
     screenshots: [
+        "/assets/projects/sbafn/sbafn-logo.png",
         "/assets/projects/sbafn/map-view.png",
         "/assets/projects/sbafn/detail-view.png"
     ],
@@ -90,6 +91,8 @@ export const projects: Project[] = [
     ],
     screenshots: [
         "/assets/projects/ecomarket/ecomarket-home.png",
+        "/assets/projects/ecomarket/eco-land.png",
+        "/assets/projects/ecomarket/eco-dash.png",
         "/assets/projects/ecomarket/eco-main.png"
     ],
     tags: ["Flask", "Flutter", "Firebase"],
