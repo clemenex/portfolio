@@ -128,7 +128,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ isDark, toggleThem
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 rounded-full blur-2xl opacity-60 animate-pulse-slow"></div>
           <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-white dark:border-slate-800 shadow-xl overflow-hidden">
              <img 
-               src="assets/profile_main.png" 
+               src="/assets/profile_main.png"
                alt="Peter Angelo Dantes" 
                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
              />
