@@ -117,14 +117,6 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack,
                    <li className="text-slate-500 italic">No features listed.</li>
                  )}
               </ul>
-
-              <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
-                 <div className="flex items-center gap-2 text-slate-400 dark:text-slate-500 text-sm mb-2">
-                    <Calendar size={16} />
-                    <span className="font-semibold uppercase tracking-wider text-xs">Timeline</span>
-                 </div>
-                 <div className="text-slate-800 dark:text-slate-200 font-medium">3 Weeks · Hackathon Project</div>
-              </div>
            </div>
 
         </div>
