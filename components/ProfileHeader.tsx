@@ -125,20 +125,30 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ isDark, toggleThem
 
         {/* Right Content - Profile Image */}
         <div className="flex-shrink-0 relative group">
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 rounded-full blur-2xl opacity-60 animate-pulse-slow"></div>
-          <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-white dark:border-slate-800 shadow-xl overflow-hidden">
-             <img 
-               src="/assets/profile_main.png"
-               alt="Peter Angelo Dantes" 
-               className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-             />
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/60 to-purple-100/40 dark:from-blue-900/40 dark:to-purple-900/40 rounded-full blur-2xl opacity-60 animate-pulse-slow"></div>
+
+          <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-4 border-white dark:border-slate-800 shadow-xl overflow-hidden">
+            {/* Default image */}
+            <img
+              src="/assets/profile_main.png"
+              alt="Peter Angelo Dantes"
+              className="w-full h-full object-cover object-top transition-transform transition-opacity duration-700
+                        group-hover:scale-110 opacity-100 group-hover:opacity-0"
+            />
+
+            {/* Hover image */}
+            <img
+              src="/assets/profile_onHover.png"
+              alt="Peter Angelo Dantes (hover)"
+              className="w-full h-full object-cover object-top transition-transform transition-opacity duration-700
+                        group-hover:scale-110 opacity-0 group-hover:opacity-100 absolute inset-0"
+            />
           </div>
-          <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white dark:bg-slate-800 p-2.5 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700 animate-float">
-             <span className="text-2xl">👋</span>
+
+          <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white dark:bg-slate-900 rounded-2xl px-3 py-2 shadow-lg border border-slate-100 dark:border-slate-700 animate-float">
+            <span className="text-2xl">👋</span>
           </div>
         </div>
 
-      </div>
-    </div>
   );
 };
