@@ -148,6 +148,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ isDark, toggleThem
             <span className="text-2xl">👋</span>
           </div>
         </div>
-
+    </div>
+  </div>
   );
 };
