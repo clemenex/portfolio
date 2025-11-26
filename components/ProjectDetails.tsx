@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, ExternalLink, Github, Layers, Calendar, Sun, Moon } from 'lucide-react';
 import { Project } from '../types';
 
