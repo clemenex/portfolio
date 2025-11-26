@@ -10,15 +10,15 @@ const experiences: ExperienceItem[] = [
     current: true
   },
   {
-    role: "Student Data Science Projects",
-    company: "Academic & Personal",
+    role: "Hackathon Competitor",
+    company: "Various Events",
     period: "2024",
     current: true
   },
   {
-    role: "Hackathon Competitor",
-    company: "Various Events",
-    period: "2024",
+    role: "DOST-SEI S&T Undergraduate Scholar",
+    company: "DOST-SEI",
+    period: "2022",
     current: true
   },
   {
