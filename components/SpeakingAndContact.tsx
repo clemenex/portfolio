@@ -14,9 +14,6 @@ export const SpeakingAndContact: React.FC = () => {
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
           I am currently available for <span className="font-semibold text-slate-800 dark:text-slate-200">internships</span>, hackathon collaborations, and student projects. Open to speaking about student tech communities and data science basics.
         </p>
-        <button className="flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group">
-          Get in touch <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-        </button>
       </div>
 
       {/* Action Buttons */}
@@ -26,7 +23,7 @@ export const SpeakingAndContact: React.FC = () => {
                <Mail className="text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors" size={18} />
                <div className="flex flex-col">
                  <span className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Email</span>
-                 <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">hello@peterdantes.dev</span>
+                 <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">petergelodantes@gmail.com</span>
                </div>
             </div>
          </div>
