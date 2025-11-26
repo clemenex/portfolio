@@ -10,6 +10,45 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ isDark, toggleThem
   const [isHackathonOpen, setIsHackathonOpen] = useState(false);
   const [isProfileHovered, setIsProfileHovered] = useState(false);
 
+  const hackathons = [
+    {
+      title: 'BPI DataWave Hackathon',
+      subtitle: 'Machine Learning Track',
+      badge: '3rd Place',
+      variant: 'highlight',
+    },
+    {
+      title: 'GDSC InnOlympics',
+      subtitle: 'Innovation Challenge',
+      badge: 'Top 5',
+      variant: 'highlight',
+    },
+    {
+      title: 'ASEAN Data Science Explorers',
+      subtitle: 'Participant · 2025',
+      badge: null,
+      variant: 'default',
+    },
+    {
+      title: 'DICT Philippine Startup Challenge',
+      subtitle: 'Participant · 2025',
+      badge: null,
+      variant: 'default',
+    },
+    {
+      title: 'Philippine Junior Data Science Competition',
+      subtitle: 'Participant · 2025',
+      badge: null,
+      variant: 'default',
+    },
+    {
+      title: 'DAP NextGen PH',
+      subtitle: 'Participant · 2025',
+      badge: null,
+      variant: 'default',
+    },
+  ];
+
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-lg dark:hover:shadow-slate-800/50 border border-slate-200 dark:border-slate-800 relative overflow-visible transition-all duration-300 ease-out group">
       
@@ -44,25 +83,34 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ isDark, toggleThem
                  <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Recent Competitions</h4>
                </div>
                <ul className="text-sm max-h-64 overflow-y-auto">
-                 <li className="px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 border-b border-slate-50 dark:border-slate-800 transition-colors">
-                   <div className="font-semibold text-slate-800 dark:text-slate-200">BPI DataWave Hackathon</div>
-                   <div className="flex justify-between items-center mt-1">
-                      <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">Machine Learning Track</span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-500">3rd Place</span>
-                   </div>
-                 </li>
-                 <li className="px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 border-b border-slate-50 dark:border-slate-800 transition-colors">
-                   <div className="font-semibold text-slate-800 dark:text-slate-200">GDSC InnOlympics</div>
-                   <div className="flex justify-between items-center mt-1">
-                      <span className="text-xs text-slate-500 dark:text-slate-400">Innovation Challenge</span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-500">Top 5</span>
-                   </div>
-                 </li>
-                 <li className="px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                   <div className="font-semibold text-slate-800 dark:text-slate-200">ASEAN Data Science Explorers</div>
-                   <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">Participant · 2025</div>
-                 </li>
-               </ul>
+                {hackathons.map((h, idx) => (
+                  <li
+                    key={idx}
+                    className={`px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors ${
+                      idx !== hackathons.length - 1 ? 'border-b border-slate-50 dark:border-slate-800' : ''
+                    }`}
+                  >
+                    <div className="font-semibold text-slate-800 dark:text-slate-200">
+                      {h.title}
+                    </div>
+
+                    {h.badge ? (
+                      <div className="flex justify-between items-center mt-1">
+                        <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                          {h.subtitle}
+                        </span>
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-500">
+                          {h.badge}
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">
+                        {h.subtitle}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>
