@@ -107,7 +107,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ isDark, toggleThem
 
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto pt-2">
              <a 
-               href="/resume.pdf" // Placeholder
+               href="/assets/Dantes_Resume.pdf"
                target="_blank"
                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-all hover:-translate-y-1 shadow-md hover:shadow-lg active:scale-95 w-full sm:w-auto"
              >
