@@ -3,10 +3,11 @@ import { Award, ExternalLink } from 'lucide-react';
 import { Certification } from '../types';
 
 const certs: Certification[] = [
-  { name: "Unlocking Business Insights through Storytelling with Data", issuer: "Coursera", year: "2025", link: "https://coursera.org/share/3ae3c78082381ee4c3c1c92169f079cb" },
-  { name: "Getting and Cleaning Data", issuer: "Johns Hopskins University | Coursera", year: "2025", link: "https://coursera.org/share/15a3383ff82bf64302a63e03313f6f78" },
+  {name: "Applied Statistics for Data Analytics", issuer: "DeepLearningAI | Coursera", year:  "2025", link: "https://coursera.org/share/e6b065b493236ba4f6394785eca69e81"},
+  { name: "Unlocking Business Insights through Storytelling with Data", issuer: "Coursera", year: "2025", link: "https://coursera.org/share/3ae3c78082381ee4c3c1c92169f079cb"},
+  { name: "Getting and Cleaning Data", issuer: "Johns Hopskins University | Coursera", year: "2025", link: "https://coursera.org/share/15a3383ff82bf64302a63e03313f6f78"},
   { name: "Introduction to Retrieval Augmented Generation (RAG)", issuer: "Duke University | Coursera", year: "2025", link: "https://coursera.org/share/b47583f7bd1b0f15b0e7a3c2343e5f6e" },
-  { name: "Specialized Models: Time Series and Survival Analysis", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/e37992a688b991c9292fe0aaf3fca710" },
+  { name: "Specialized Models: Time Series and Survival Analysis", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/e37992a688b991c9292fe0aaf3fca710"}
 ];
 
 export const Certifications: React.FC = () => {
