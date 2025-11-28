@@ -4,6 +4,7 @@ import { Certification } from '../types';
 
 const certs: Certification[] = [
   {name: "Applied Statistics for Data Analytics", issuer: "DeepLearningAI | Coursera", year:  "2025", link: "https://coursera.org/share/e6b065b493236ba4f6394785eca69e81"},
+  {name: "Supervised Machine Learning: Regression", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/950fe5c21fca1d4a68d02ef2e7dbd5d3"},
   { name: "Unlocking Business Insights through Storytelling with Data", issuer: "Coursera", year: "2025", link: "https://coursera.org/share/3ae3c78082381ee4c3c1c92169f079cb"},
   { name: "Getting and Cleaning Data", issuer: "Johns Hopskins University | Coursera", year: "2025", link: "https://coursera.org/share/15a3383ff82bf64302a63e03313f6f78"},
   { name: "Introduction to Retrieval Augmented Generation (RAG)", issuer: "Duke University | Coursera", year: "2025", link: "https://coursera.org/share/b47583f7bd1b0f15b0e7a3c2343e5f6e" },
