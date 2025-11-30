@@ -2,7 +2,7 @@ import React from 'react';
 import { Award, ExternalLink } from 'lucide-react';
 import { Certification } from '../types';
 
-const certs: Certification[] = [
+export const certs: Certification[] = [
   {name: "Applied Statistics for Data Analytics", issuer: "DeepLearningAI | Coursera", year:  "2025", link: "https://coursera.org/share/e6b065b493236ba4f6394785eca69e81"},
   {name: "R Programming", issuer: "Johns Hopkins University | Coursera", year: "2025", link: "https://coursera.org/share/aa0487248fc48f5e679017e899726370"},
   {name: "Supervised Machine Learning: Regression", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/950fe5c21fca1d4a68d02ef2e7dbd5d3"},
@@ -12,7 +12,18 @@ const certs: Certification[] = [
   { name: "Specialized Models: Time Series and Survival Analysis", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/e37992a688b991c9292fe0aaf3fca710"}
 ];
 
-export const Certifications: React.FC = () => {
+interface CertificationProps {
+  limit?: number;
+  onViewAll?: () => void;
+}
+
+export const Certifications: React.FC<CertificationProps> = () => {
+
+  const visibleCerts =  
+    typeof limit === 'number' ? certs.slice(0, limit) : certs;
+
+  const canViewAll =   typeof limit === 'number' && certs.length > limit;
+
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-lg dark:hover:shadow-slate-800/50 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 h-full">
       <div className="flex items-center gap-3 mb-6">
@@ -20,8 +31,8 @@ export const Certifications: React.FC = () => {
         <h2 className="text-xl font-bold text-slate-900 dark:text-white">Certifications</h2>
       </div>
 
-      <div className="space-y-3">
-        {certs.map((cert, idx) => (
+      <div className="space-y-3 flex-1">
+        {visibleCerts.map((cert, idx) => (
           <a 
             key={idx} 
             href={cert.link}
@@ -42,6 +53,16 @@ export const Certifications: React.FC = () => {
           </a>
         ))}
       </div>
+
+        {canViewAll && onViewAll && (
+          <button
+            type="button"
+            onClick={onViewAll}
+            className="mt-4 w-full text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 rounded-xl py-2 border border-blue-100 dark:border-blue-900 transition-all"
+          >
+            View all {certs.length} certifications
+          </button>
+        )}
     </div>
   );
 };
