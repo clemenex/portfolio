@@ -22,7 +22,8 @@ export const Certifications: React.FC<CertificationProps> = () => {
   const visibleCerts =  
     typeof limit === 'number' ? certs.slice(0, limit) : certs;
 
-  const canViewAll =   typeof limit === 'number' && certs.length > limit;
+  const canViewAll =
+    typeof limit === 'number' && certs.length > limit;
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-lg dark:hover:shadow-slate-800/50 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 h-full">
