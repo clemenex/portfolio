@@ -17,7 +17,7 @@ interface CertificationProps {
   onViewAll?: () => void;
 }
 
-export const Certifications: React.FC<CertificationProps> = () => {
+export const Certifications: React.FC<CertificationProps> = ({limit, onViewAll}) => {
 
   const visibleCerts =  
     typeof limit === 'number' ? certs.slice(0, limit) : certs;
