@@ -84,7 +84,7 @@ const App: React.FC = () => {
                 <TechStack />
               </div>
               <div className="lg:col-span-4 animate-fade-in-up opacity-0" style={{ animationDelay: '400ms' }}>
-                <Certifications limit={5} onViewAll={handleViewAllCerts} />
+                <Certifications limit={3} onViewAll={handleViewAllCerts} />
               </div>
 
               {/* Row 3 */}
