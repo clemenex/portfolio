@@ -22,6 +22,7 @@ export interface Certification {
   issuer: string;
   year: string;
   link?: string;
+  recent?: boolean;
 }
 
 export interface Testimonial {
