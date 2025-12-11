@@ -55,17 +55,19 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack,
                  <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                     {project.description}
                  </p>
-                 
+                 {project.link && (
                  <div className="flex flex-wrap gap-3 pt-4">
-                    <a href={project.link} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-medium hover:bg-slate-800 dark:hover:bg-slate-600 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-slate-200 dark:shadow-none">
-                       <span>View Live Demo</span>
-                       <ExternalLink size={16} />
-                    </a>
-                    <a href={project.codeLink} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-all active:scale-95">
-                       <Github size={18} />
-                       <span>Source Code</span>
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-medium hover:bg-slate-800 dark:hover:bg-slate-600 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-slate-200 dark:shadow-none"
+                     >
+                        <span>View Live Demo</span>
+                        <ExternalLink size={16} />
                     </a>
                  </div>
+                 )}
               </div>
            </div>
 

@@ -18,8 +18,6 @@ export const projects: Project[] = [
         "/assets/projects/clinician-ai/results.png"
     ],
     tags: ["Python", "RAG", "Scikit-learn", "NLP", "Flask"],
-    link: "#",
-    codeLink: "#"
   },
   {
     id: "sbafn",
@@ -39,7 +37,6 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "Geospatial", "OSMnx", "Machine Learning"],
     link: "https://project-sbafn.vercel.app",
-    codeLink: "#"
   },
   {
     id: "gov-insights",
@@ -57,8 +54,6 @@ export const projects: Project[] = [
         "/assets/projects/dashgov/dashgov-explain.png"
     ],
     tags: ["Gemini", "Flutter", "Flask"],
-    link: "#",
-    codeLink: "#"
   },
   {
     id: "deepfake-detection",
@@ -75,8 +70,6 @@ export const projects: Project[] = [
       "https://www.socialmediasafety.org/wp-content/uploads/sites/75/2019/12/deepfakes-1000x600.png"
     ],
     tags: ["keras", "Tensorflow", "R"],
-    link: "#",
-    codeLink: "#"
   },
   {
     id: "ecomarket",
@@ -96,8 +89,6 @@ export const projects: Project[] = [
         "/assets/projects/ecomarket/eco-main.png"
     ],
     tags: ["Flask", "Flutter", "Firebase"],
-    link: "#",
-    codeLink: "#"
   },
   {
     id: "bpi-alternative-metrics",
@@ -110,7 +101,5 @@ export const projects: Project[] = [
       "https://newsbytes.ph/wp-content/uploads/2023/06/bpi_pic.png"
     ],
     tags: ["Python", "Machine Learning", "AI-Driven"],
-    link: "#",
-    codeLink: "#"
   }
 ];
