@@ -54,6 +54,7 @@ export const projects: Project[] = [
         "/assets/projects/dashgov/dashgov-explain.png"
     ],
     tags: ["Gemini", "Flutter", "Flask"],
+    codeLink: "https://github.com/clemenex/gdsc-dashboard"
   },
   {
     id: "deepfake-detection",
@@ -70,6 +71,7 @@ export const projects: Project[] = [
       "https://www.socialmediasafety.org/wp-content/uploads/sites/75/2019/12/deepfakes-1000x600.png"
     ],
     tags: ["keras", "Tensorflow", "R"],
+    codeLink: "https://github.com/clemenex/deepfake-detection-model"
   },
   {
     id: "ecomarket",
@@ -89,6 +91,7 @@ export const projects: Project[] = [
         "/assets/projects/ecomarket/eco-main.png"
     ],
     tags: ["Flask", "Flutter", "Firebase"],
+    codeLink: "https://github.com/KubangPawis/eco-market"
   },
   {
     id: "bpi-alternative-metrics",
@@ -98,7 +101,11 @@ export const projects: Project[] = [
     features: [
     ],
     screenshots: [
-      "https://newsbytes.ph/wp-content/uploads/2023/06/bpi_pic.png"
+      "/assets/projects/bpi-datawave/bpi-intro.png",
+      "/assets/projects/bpi-datawave/bpi-info.png",
+      "/assets/projects/bpi-datawave/bpi-form.png",
+      "/assets/projects/bpi-datawave/bpi-ocr.png",
+      "/assets/projects/bpi-datawave/bpi-ocrf.png",
     ],
     tags: ["Python", "Machine Learning", "AI-Driven"],
   }

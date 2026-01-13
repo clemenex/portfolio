@@ -55,19 +55,33 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onBack,
                  <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                     {project.description}
                  </p>
-                 {project.link && (
-                 <div className="flex flex-wrap gap-3 pt-4">
-                    <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-medium hover:bg-slate-800 dark:hover:bg-slate-600 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-slate-200 dark:shadow-none"
+               {(project.link || project.codeLink) && (
+               <div className="flex flex-wrap gap-3 pt-4">
+                  {project.link && (
+                     <a
+                     href={project.link}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-medium hover:bg-slate-800 dark:hover:bg-slate-600 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-slate-200 dark:shadow-none"
                      >
-                        <span>View Live Demo</span>
-                        <ExternalLink size={16} />
-                    </a>
-                 </div>
-                 )}
+                     <span>View Live Demo</span>
+                     <ExternalLink size={16} />
+                     </a>
+                  )}
+
+                  {project.codeLink && (
+                     <a
+                     href={project.codeLink}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-medium hover:bg-slate-300 dark:hover:bg-slate-700 transition-all hover:scale-[1.02] active:scale-95 border border-slate-200 dark:border-slate-700"
+                     >
+                     <Github size={16} />
+                     View Source
+                     </a>
+                  )}
+               </div>
+               )}
               </div>
            </div>
 
