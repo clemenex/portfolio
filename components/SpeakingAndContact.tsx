@@ -12,7 +12,7 @@ export const SpeakingAndContact: React.FC = () => {
            <h2 className="text-xl font-bold text-slate-900 dark:text-white">Speaking & Contact</h2>
         </div>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-          I am currently available for <span className="font-semibold text-slate-800 dark:text-slate-200">internships</span>, hackathon collaborations, and student projects. Open to speaking about student tech communities and data science basics.
+          I am currently available for <span className="font-semibold text-slate-800 dark:text-slate-200">Commissions</span>, hackathon collaborations, and student projects. Open to speaking about student tech communities and data science basics.
         </p>
       </div>
 
