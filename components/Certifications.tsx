@@ -3,14 +3,15 @@ import { Award, ExternalLink } from 'lucide-react';
 import { Certification } from '../types';
 
 export const certs: Certification[] = [
-  {name: "Applied Statistics for Data Analytics", issuer: "DeepLearningAI | Coursera", year:  "2025", link: "https://coursera.org/share/e6b065b493236ba4f6394785eca69e81", recent: true},
-  {name: "R Programming", issuer: "Johns Hopkins University | Coursera", year: "2025", link: "https://coursera.org/share/aa0487248fc48f5e679017e899726370"},
-  {name: "Supervised Machine Learning: Regression", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/950fe5c21fca1d4a68d02ef2e7dbd5d3"},
-  { name: "Unlocking Business Insights through Storytelling with Data", issuer: "Coursera", year: "2025", link: "https://coursera.org/share/3ae3c78082381ee4c3c1c92169f079cb"},
-  { name: "Getting and Cleaning Data", issuer: "Johns Hopskins University | Coursera", year: "2025", link: "https://coursera.org/share/15a3383ff82bf64302a63e03313f6f78"},
+  { name: "Pearson IT Specialist: Data Analytics", issuer: "Certiport | Pearson", year: "2026", link: "https://www.credly.com/badges/fb211ec8-e544-45ce-bda8-e5fce53f80fa/linked_in_profile", recent: true },
+  { name: "Applied Statistics for Data Analytics", issuer: "DeepLearningAI | Coursera", year: "2025", link: "https://coursera.org/share/e6b065b493236ba4f6394785eca69e81" },
+  { name: "R Programming", issuer: "Johns Hopkins University | Coursera", year: "2025", link: "https://coursera.org/share/aa0487248fc48f5e679017e899726370" },
+  { name: "Supervised Machine Learning: Regression", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/950fe5c21fca1d4a68d02ef2e7dbd5d3" },
+  { name: "Unlocking Business Insights through Storytelling with Data", issuer: "Coursera", year: "2025", link: "https://coursera.org/share/3ae3c78082381ee4c3c1c92169f079cb" },
+  { name: "Getting and Cleaning Data", issuer: "Johns Hopskins University | Coursera", year: "2025", link: "https://coursera.org/share/15a3383ff82bf64302a63e03313f6f78" },
   { name: "Introduction to Retrieval Augmented Generation (RAG)", issuer: "Duke University | Coursera", year: "2025", link: "https://coursera.org/share/b47583f7bd1b0f15b0e7a3c2343e5f6e" },
-  { name: "Specialized Models: Time Series and Survival Analysis", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/e37992a688b991c9292fe0aaf3fca710"},
-  {name: "The Data Scientist's Toolbox", issuer: "John Hopkins University", year: "2025", link: "https://coursera.org/share/d08fadce535ecb7a87bfaacad97b8e17"}
+  { name: "Specialized Models: Time Series and Survival Analysis", issuer: "IBM | Coursera", year: "2025", link: "https://coursera.org/share/e37992a688b991c9292fe0aaf3fca710" },
+  { name: "The Data Scientist's Toolbox", issuer: "John Hopkins University", year: "2025", link: "https://coursera.org/share/d08fadce535ecb7a87bfaacad97b8e17" }
 ];
 
 interface CertificationProps {
@@ -18,9 +19,9 @@ interface CertificationProps {
   onViewAll?: () => void;
 }
 
-export const Certifications: React.FC<CertificationProps> = ({limit, onViewAll}) => {
+export const Certifications: React.FC<CertificationProps> = ({ limit, onViewAll }) => {
 
-  const visibleCerts =  
+  const visibleCerts =
     typeof limit === 'number' ? certs.slice(0, limit) : certs;
 
   const canViewAll =
@@ -35,8 +36,8 @@ export const Certifications: React.FC<CertificationProps> = ({limit, onViewAll})
 
       <div className="space-y-3 flex-1">
         {visibleCerts.map((cert, idx) => (
-          <a 
-            key={idx} 
+          <a
+            key={idx}
             href={cert.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,9 +46,9 @@ export const Certifications: React.FC<CertificationProps> = ({limit, onViewAll})
             p-3 rounded-xl border cursor-pointer gap-2 group
             transition-all duration-200 hover:scale-[1.02] hover:shadow-sm
             ${cert.recent
-              ?  'bg-blue-50/40 dark:bg-blue-950/20 border-blue-400/70 dark:border-blue-500/70 ring-2 ring-blue-400/30 dark:ring-blue-500/30'
-              :  'bg-slate-50 dark:bg-slate-800 border-slate-100 dark:border-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-800/80 hover:border-slate-200 dark:hover:border-slate-600'
-            }
+                ? 'bg-blue-50/40 dark:bg-blue-950/20 border-blue-400/70 dark:border-blue-500/70 ring-2 ring-blue-400/30 dark:ring-blue-500/30'
+                : 'bg-slate-50 dark:bg-slate-800 border-slate-100 dark:border-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-800/80 hover:border-slate-200 dark:hover:border-slate-600'
+              }
           `}
           >
             <div>
@@ -64,15 +65,15 @@ export const Certifications: React.FC<CertificationProps> = ({limit, onViewAll})
         ))}
       </div>
 
-        {canViewAll && onViewAll && (
-          <button
-            type="button"
-            onClick={onViewAll}
-            className="mt-4 w-full text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 rounded-xl py-2 border border-blue-100 dark:border-blue-900 transition-all"
-          >
-            View all {certs.length} certifications
-          </button>
-        )}
+      {canViewAll && onViewAll && (
+        <button
+          type="button"
+          onClick={onViewAll}
+          className="mt-4 w-full text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 rounded-xl py-2 border border-blue-100 dark:border-blue-900 transition-all"
+        >
+          View all {certs.length} certifications
+        </button>
+      )}
     </div>
   );
 };

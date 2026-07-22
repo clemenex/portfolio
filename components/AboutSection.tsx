@@ -10,13 +10,13 @@ export const AboutSection: React.FC = () => {
       </div>
       <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
         <p>
-          I'm a 4th year Computer Science student with a specialization in data science, artificial intelligence frameworks like RAG, and UI/UX development. My academic journey has mainly been defined by a curiosity for how raw data can be transformed into actionable insights.
+          Graduated as Summa Cum Laude, I am a BSCS Data Science major with hands-on experience as a data scientist, earning 3rd Place in BPI DataWave 2024 and Top 5 in GDSC InnOlympics for end-to-end ML solutions
         </p>
         <p>
-          Beyond the classroom, I'm an active participant in the tech community. I've spent my weekends building dashboards and competed in various hackathons. I thrive in high-pressure environments where creativity meets technical constraint.
+          I’ve led projects from raw data to deployment-ready models, dashboards, and real-world forecasting/analytics pipelines.
         </p>
         <p>
-          My goal is to leverage data and AI to solve impactful problems in our community, bridging the gap between complex algorithms and intuitive user experiences.
+          I also keep track of the latest AI technologies that innovate data analysis, using automation products, CLAUDE/OpenAI frameworks and skills, and other methodologies to turn real-world data into decision-ready insights for clients, industries, and communities.
         </p>
       </div>
     </div>

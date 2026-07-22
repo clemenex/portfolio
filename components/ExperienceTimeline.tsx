@@ -4,22 +4,22 @@ import { ExperienceItem } from '../types';
 
 const experiences: ExperienceItem[] = [
   {
-    role: "BS Computer Science",
-    company: "Manuel S. Enverga University Foundation",
+    role: "Software Engineer Intern",
+    company: "InsightQ Consulting Group",
     period: "2026",
-    current: true
+    current: false
   },
   {
-    role: "Hackathon Competitor",
-    company: "Various Events",
-    period: "2024",
-    current: true
+    role: "BS Computer Science Graduate",
+    company: "Manuel S. Enverga University Foundation",
+    period: "2026",
+    current: false
   },
   {
     role: "DOST-SEI S&T Undergraduate Scholar",
     company: "DOST-SEI",
     period: "2022",
-    current: true
+    current: false
   },
   {
     role: "Hello World!",
